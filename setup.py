@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="leadergpu",
+    name="leadergpu-python",
     version=version['VERSION'],
     author="Marcus Edel",
     author_email="marcus@urgs.org",
