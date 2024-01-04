@@ -260,6 +260,23 @@ class ServersService:
         """
         return [server for server in self.get() if server.id == id][0]
 
+    def order(self, nomenclature_id: int, os: str, period_count: int) -> dict:
+        """Creates a new server instance
+
+        :param nomenclature_id: product id returned in products list call
+        :type nomenclature_id: int
+        :param os: os type, can be one of the following: 'centos', 'windows', 'ubuntu'
+        :type os: str
+        :param period_count: order period
+        :type period_count: int
+        """
+        payload = {
+            "nomenclature_id": nomenclature_id,
+            "os": os,
+            "period_count": period_count
+        }
+        return self._http_client.post("/servers/order", json=payload).json()
+
     def action(self, id_list: Union[List[int], int], action: str) -> List[bool]:
         """Performs an action on a list of servers / single server
 
