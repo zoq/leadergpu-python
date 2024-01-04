@@ -6,7 +6,9 @@ A Python library for interacting with the LeaderGPU Public API
 
 1. Install with pip:
 
+```bash
 pip install leadergpu-python
+```
 
 2. Set the `LEADERGPU_CLIENT_ID` (email) and `LEADERGPU_AUTH_TOKEN` (password) environment variable:
 
